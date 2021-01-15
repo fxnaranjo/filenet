@@ -212,7 +212,7 @@ cd /opt/ibm/ldap/V6.4/sbin
 ```
 
 #### You can obtain this key using this procedure:
-* Log in to [MyIBM Container Software Library](https://www.google.com) with the IBMid and password that is associated with the entitled software.
+* Log in to [MyIBM Container Software Library](https://myibm.ibm.com/products-services/containerlibrary) with the IBMid and password that is associated with the entitled software.
 * In the Container software library tile, verify your entitlement on the View library page, and then go to Get entitlement key to retrieve the key. 
 
 ```
@@ -245,3 +245,6 @@ cd /opt/ibm/ldap/V6.4/sbin
 --from-literal=jMailUsername="mailadmin" \
 --from-literal=jMailPassword="<password>" -n filenet
 ```
+
+***
+### Installing Filenet using the Cloud Pak for Automation Operator
