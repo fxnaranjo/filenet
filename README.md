@@ -257,4 +257,4 @@ cd /opt/ibm/ldap/V6.4/sbin
 #cd {$REPO_DIRECTORY}/cert-kubernetes/scripts
 #./cp4a-clusteradmin-setup.sh 
 ```
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+(https://github.com/fxnaranjo/filenet/raw/main/images/1setup.png "Setup1")
