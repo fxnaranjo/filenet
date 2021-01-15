@@ -257,4 +257,7 @@ cd /opt/ibm/ldap/V6.4/sbin
 #cd {$REPO_DIRECTORY}/cert-kubernetes/scripts
 #./cp4a-clusteradmin-setup.sh 
 ```
+* In this screen select the type of platform, in this case option 1
 ![Setup1](https://github.com/fxnaranjo/filenet/raw/main/images/1setup.png "Setup1")
+
+
