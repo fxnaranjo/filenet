@@ -272,7 +272,7 @@ cd /opt/ibm/ldap/V6.4/sbin
 * Next, wait for the script to finish the execution presenting the following screen
 ![Setup5](https://github.com/fxnaranjo/filenet/raw/main/images/5setup.png "Setup5")
 
-2. Run the operator install and create the Custom Resource Definition
+3. Run the operator install and create the Custom Resource Definition
 ```
 #cd {$REPO_DIRECTORY}/cert-kubernetes/scripts
 #./cp4a-deployment.sh
@@ -325,7 +325,7 @@ cd /opt/ibm/ldap/V6.4/sbin
 * Review the openshift web console until the operator is up and running
 ![Opp14](https://github.com/fxnaranjo/filenet/raw/main/images/14operator.png "Operator14")
 
-2. Deploy Filenet Custom Resource Definition
+4. Deploy Filenet Custom Resource Definition
 * The prior procedure creates a file in {$REPO_DIRECTORY}/cert-kubernetes/scripts/generated-cr called ibm_cp4a_cr_final.yaml, to deploy filenet you have to edit this file in order to include your environment properties.
 
 * The following [file](https://github.com/fxnaranjo/filenet/tree/main/cr) can be used as an example.
@@ -346,6 +346,10 @@ cd /opt/ibm/ldap/V6.4/sbin
 * The screen will show the URLs for both ACCE and Navigator
 ![Deploy2](https://github.com/fxnaranjo/filenet/raw/main/images/2deploy.png "Deploy2")
 
+***
+***
+***
+# Congratulations!!, Filenet is now ready to use
 
 
 
