@@ -35,7 +35,7 @@ ssh -X -C -i id_rsa root@169.59.xxx.xxx
 3. Copy the DB2 installer files into the virtual server, you can use a tool such as Filezilla to do this
 
 
-4. INSTALL DB2 using the following commands:
+4. Install DB2 using the following commands:
 * Untar the installers:
 ```
 #cd {$INSTALLER_DIRECORY}
@@ -54,7 +54,7 @@ ssh -X -C -i id_rsa root@169.59.xxx.xxx
 #cd /opt/ibm/db2/V11.1/adm
 #./db2licm -a {$INSTALLER_DIRECORY}/awse_o/db2/license/db2awse_o.lic
 ```
-5. Create the reqiered databases
+5. Create the required databases
 * Using the files provided in the [db2](https://github.com/fxnaranjo/filenet/tree/main/db2) folder on this repo, run the following commands:
 ```
 #su - db2inst1
@@ -63,4 +63,6 @@ ssh -X -C -i id_rsa root@169.59.xxx.xxx
 ./createICNDB.sh -n ICNDB -s ICN_SH -t ICN_TS -u db2inst1 -a ceadmin
 ```
 
+***
+### Preparing the LDAP Server
 
