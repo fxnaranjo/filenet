@@ -32,7 +32,7 @@ ssh -X -C -i id_rsa root@169.59.xxx.xxx
 #xhost +
 #export DISPLAY=:10.0
 ```
-3. Copy the db2 and IBM Direcotry Server installer files into the virtual server, you can use a tool such as Filezilla to to this
+3. Copy the DB2 installer files into the virtual server, you can use a tool such as Filezilla to do this
 
 
 4. INSTALL DB2 using the following commands:
