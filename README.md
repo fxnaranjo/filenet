@@ -184,5 +184,64 @@ cd /opt/ibm/ldap/V6.4/sbin
 #exportfs -a
 #systemctl start nfs-server.service
 ```
+***
+### Preparing the NFS PROVISIONER IN REDHAT OPENSHIFT CLUSTER (ROKS)
+#### For this step you must use a terminal console with the oc command line tool installed
+#### For this step you must be logged in into REDHAT OPENSHIFT CLUSTER (ROKS)
+```
+#git clone https://github.com/kubernetes-incubator/external-storage.git kubernetes-incubator
+#cd {$REPO_DIRECTORY}/kubernetes-incubator/nfs-client
+#oc create namespace openshift-nfs-storage
+#oc project openshift-nfs-storage
+#NAMESPACE=`oc project -q`
+#sed -i'' "s/namespace:.*/namespace: $NAMESPACE/g" ./deploy/rbac.yaml
+#sed -i'' "s/namespace:.*/namespace: $NAMESPACE/g" ./deploy/deployment.yaml 
+#oc create -f deploy/rbac.yaml
+#oc adm policy add-scc-to-user hostmount-anyuid system:serviceaccount:$NAMESPACE:nfs-client-provisioner
+#oc create -f deploy/class.yaml 
+#oc create -f deploy/deployment.yaml 
+```
+***
+### Preparing the Filenet namespace in REDHAT OPENSHIFT CLUSTER (ROKS)
+#### For this step you must use a terminal console with the oc command line tool installed
+#### For this step you must be logged in into REDHAT OPENSHIFT CLUSTER (ROKS)
+```
+#oc new-project filenet
+
+#oc adm policy add-scc-to-user privileged -z ibm-cp4a-operator -n filenet
+```
+
+#### You can obtain this key using this procedure:
+* Log in to [MyIBM Container Software Library](https://www.google.com) with the IBMid and password that is associated with the entitled software.
+* In the Container software library tile, verify your entitlement on the View library page, and then go to Get entitlement key to retrieve the key. 
+
+```
+#oc create secret docker-registry ibm-entitlement-key --docker-username=cp --docker-password=<token> --docker-server=cp.icr.io -n filenet
+```
 
 
+* Create de LDAP Secret
+```
+#oc create secret generic ldap-bind-secret --from-literal=ldapUsername="cn=root" --from-literal=ldapPassword="<password>"
+```
+* Create de DB2 Secret for GCDB and Object Store Database
+```
+#oc create secret generic ibm-fncm-secret \
+--from-literal=gcdDBUsername="db2inst1" --from-literal=gcdDBPassword="<>password" \
+--from-literal=osDBUsername="db2inst1" --from-literal=osDBPassword="<password>" \
+--from-literal=appLoginUsername="ceadmin" --from-literal=appLoginPassword="<password>" \
+--from-literal=keystorePassword="<password>" \
+--from-literal=ltpaPassword="<password>" -n filenet
+```
+* Create de NAVIGATOR Secret
+```
+#oc create secret generic ibm-ban-secret \
+--from-literal=navigatorDBUsername="db2inst1" \
+--from-literal=navigatorDBPassword="<password>" \
+--from-literal=keystorePassword="<password>" \
+--from-literal=ltpaPassword="<password>" \
+--from-literal=appLoginUsername="<user>" \
+--from-literal=appLoginPassword="<password>" \
+--from-literal=jMailUsername="mailadmin" \
+--from-literal=jMailPassword="<password>" -n filenet
+```
