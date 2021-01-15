@@ -35,7 +35,7 @@ ssh -X -C -i id_rsa root@169.59.xxx.xxx
 3. Copy the db2 and IBM Direcotry Server installer files into the virtual server, you can use a tool such as Filezilla to to this
 
 
-4.-INSTALL DB2 using the following commands:
+4. INSTALL DB2 using the following commands:
 * Untar the installers:
 ```
 #cd {$INSTALLER_DIRECORY}
@@ -43,7 +43,7 @@ ssh -X -C -i id_rsa root@169.59.xxx.xxx
 #unzip DB2_AWSE_Restricted_Activation_11.1.zip
 ```
 
-* Install DB2 using th wizard, take special notes of the user and password used for the db2 instance
+* Install DB2 using the wizard, take special notes of the user and password used for the db2 instance
 ```
 #cd server_awse_o
 #./db2setup
@@ -53,4 +53,14 @@ ssh -X -C -i id_rsa root@169.59.xxx.xxx
 ```
 #cd /opt/ibm/db2/V11.1/adm
 #./db2licm -a {$INSTALLER_DIRECORY}/awse_o/db2/license/db2awse_o.lic
+```
+5. Create the reqiered databases
+* Using the file provided in the db2 folder on this repo, run the following commands:
+```
+#su - db2inst1
+#./GCDDB.sh GCDDB   ----> CREATES THE GCD Database with the provided name
+#./OS1DB.sh OSDB    ----> CREATES THE Object Store Database with the provided name
+./createICNDB.sh -n ICNDB -s ICN_SH -t ICN_TS -u db2inst1 -a ceadmin
+```
+
 
