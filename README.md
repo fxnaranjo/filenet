@@ -165,7 +165,7 @@ cd /opt/ibm/ldap/V6.4/sbin
 #./ldapsearch -h ldap://localhost:389 -s base -b " " objectclass=* ibm-slapdisconfigurationmode
 ```
 * Create sample user and gruops using ldif
-1. Use the files provided in the [ldap](https://github.com/fxnaranjo/filenet/tree/main/ldap) folder on this repo.
+1. Use the file provided in the [ldap](https://github.com/fxnaranjo/filenet/tree/main/ldap) folder on this repo.
 2. You can use tools such as [Apache Directory Studio](https://directory.apache.org/studio/) to manage the ldap instance.
 
 ***
