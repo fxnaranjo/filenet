@@ -248,3 +248,12 @@ cd /opt/ibm/ldap/V6.4/sbin
 
 ***
 ### Installing Filenet using the Cloud Pak for Automation Operator
+1. Download the following github repo
+```
+#git clone https://github.com/icp4a/cert-kubernetes.git
+```
+2. Run the cluster admin setup script
+```
+#cd {$REPO_DIRECTORY}/cert-kubernetes/scripts
+#./cp4a-clusteradmin-setup.sh 
+```
