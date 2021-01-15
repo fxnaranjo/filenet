@@ -260,4 +260,19 @@ cd /opt/ibm/ldap/V6.4/sbin
 * In this screen select the type of platform, in this case option 1
 ![Setup1](https://github.com/fxnaranjo/filenet/raw/main/images/1setup.png "Setup1")
 
+* In this step select the type of deployment, in this case option 2
+![Setup2](https://github.com/fxnaranjo/filenet/raw/main/images/2setup.png "Setup2")
+
+* Next, enter the name of the namespace to be used for the installation
+![Setup3](https://github.com/fxnaranjo/filenet/raw/main/images/3setup.png "Setup3")
+
+* Next, select the user to be used for the installation
+![Setup4](https://github.com/fxnaranjo/filenet/raw/main/images/4setup.png "Setup4")
+
+* Next, wait for the script to finish the execution presenting the following screen
+![Setup5](https://github.com/fxnaranjo/filenet/raw/main/images/5setup.png "Setup5")
+
+
+
+
 
