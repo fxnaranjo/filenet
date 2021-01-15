@@ -4,7 +4,7 @@ This article is intended to guide readers into an easy installation of a simple 
 This steps are for demonstrations only and not intended for an actual environment. Security and performance considerations must be addressed for each component in any installation
 
 ***
-### ARCHITECTURE
+### 1.ARCHITECTURE
 
 IBM Cloud components used were:
 1. A small Openshift cluster of two worker nodes (4x16) in vpc
@@ -16,7 +16,7 @@ Installers used:
 3. DB2_AWSE_REST_Svr_11.1_Lnx_86-64.tar.gz ---> installer file for IBM DB2 11.1.x
 4. DB2_AWSE_Restricted_Activation_11.1.zip ---> activation package for IBM DB2 11.1.x
 ***
-### Preparing the Databases
+### 2.Preparing the Databases
 
 1. First you must login into the virtual server instance of IBM Cloud
 - You will need the private key pair of the public key used to create the virtual instance and also the assigned IP address
@@ -70,7 +70,7 @@ ssh -X -C -i id_rsa root@169.59.xxx.xxx
 ```
 
 ***
-### Preparing the LDAP Server
+### 3.Preparing the LDAP Server
 * Unzip the installers:
 ```
 #cd {$INSTALLER_DIRECORY}
@@ -169,7 +169,7 @@ cd /opt/ibm/ldap/V6.4/sbin
 2. You can use tools such as [Apache Directory Studio](https://directory.apache.org/studio/) to manage the ldap instance.
 
 ***
-### Preparing the NFS SERVER
+### 4.Preparing the NFS SERVER
 * Install and enable nfs service
 ```
 #yum install nfs-utils -y
@@ -185,7 +185,7 @@ cd /opt/ibm/ldap/V6.4/sbin
 #systemctl start nfs-server.service
 ```
 ***
-### Preparing the NFS PROVISIONER IN REDHAT OPENSHIFT CLUSTER (ROKS)
+### 5.Preparing the NFS provisioner IN REDHAT OPENSHIFT CLUSTER (ROKS)
 #### For this step you must use a terminal console with the oc command line tool installed
 #### For this step you must be logged in into REDHAT OPENSHIFT CLUSTER (ROKS)
 ```
@@ -202,7 +202,7 @@ cd /opt/ibm/ldap/V6.4/sbin
 #oc create -f deploy/deployment.yaml 
 ```
 ***
-### Preparing the Filenet namespace in REDHAT OPENSHIFT CLUSTER (ROKS)
+### 6.Preparing the Filenet namespace in REDHAT OPENSHIFT CLUSTER (ROKS)
 #### For this step you must use a terminal console with the oc command line tool installed
 #### For this step you must be logged in into REDHAT OPENSHIFT CLUSTER (ROKS)
 ```
@@ -247,7 +247,7 @@ cd /opt/ibm/ldap/V6.4/sbin
 ```
 
 ***
-### Installing Filenet using the Cloud Pak for Automation Operator
+### 7.Installing Filenet using the Cloud Pak for Automation Operator
 1. Download the following github repo
 ```
 #git clone https://github.com/icp4a/cert-kubernetes.git
