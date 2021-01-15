@@ -272,12 +272,13 @@ cd /opt/ibm/ldap/V6.4/sbin
 * Next, wait for the script to finish the execution presenting the following screen
 ![Setup5](https://github.com/fxnaranjo/filenet/raw/main/images/5setup.png "Setup5")
 
-2. Run the operator install and create de Custom Resource Definition
+2. Run the operator install and create the Custom Resource Definition
 ```
 #cd {$REPO_DIRECTORY}/cert-kubernetes/scripts
 #./cp4a-deployment.sh
 ```
-
+* Accept the licence
+![Opp1](https://github.com/fxnaranjo/filenet/raw/main/images/1operator.png "Operator5")
 
 
 
