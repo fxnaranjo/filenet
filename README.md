@@ -280,6 +280,61 @@ cd /opt/ibm/ldap/V6.4/sbin
 * Accept the licence
 ![Opp1](https://github.com/fxnaranjo/filenet/raw/main/images/1operator.png "Operator5")
 
+* Enter either New or Existing installation, in this case New(1)
+![Opp2](https://github.com/fxnaranjo/filenet/raw/main/images/2operator.png "Operator2")
+
+* Enter the option to use OLM, in this case No
+![Opp3](https://github.com/fxnaranjo/filenet/raw/main/images/3operator.png "Operator3")
+
+* In this step select the type of deployment, in this case option 2
+![Setup2](https://github.com/fxnaranjo/filenet/raw/main/images/2setup.png "Setup2")
+
+* In this screen select the type of platform, in this case option 1
+![Setup1](https://github.com/fxnaranjo/filenet/raw/main/images/1setup.png "Setup1")
+
+* Select the component of the cloud pak to be installed, in this case option 1
+![Opp4](https://github.com/fxnaranjo/filenet/raw/main/images/4operator.png "Operator4")
+
+* In the next screen just hit ENTER because no additional components will be installed
+![Opp5](https://github.com/fxnaranjo/filenet/raw/main/images/5operator.png "Operator5")
+
+* Next, you must select the features of filnet to be installed, just hit ENTER because no additional will be required. By default cpe,graphql and navigator are installed
+![Opp6](https://github.com/fxnaranjo/filenet/raw/main/images/6operator.png "Operator6")
+
+* Next, indicate that you already have an Entitlement Registry key
+![Opp7](https://github.com/fxnaranjo/filenet/raw/main/images/7operator.png "Operator7")
+
+* Next, enter the Entitlement Registry key
+![Opp8](https://github.com/fxnaranjo/filenet/raw/main/images/8operator.png "Operator8")
+
+* Next, enter the Cluster hostname
+![Opp9](https://github.com/fxnaranjo/filenet/raw/main/images/9operator.png "Operator9")
+
+* Next, enter the Storage class to be used, in this case: managed-nfs-storage
+![Opp10](https://github.com/fxnaranjo/filenet/raw/main/images/10operator.png "Operator10")
+
+* Next, enter the type of LDAP to be used, in this case: Tivoli Directory Server / Security Directory Server
+![Opp11](https://github.com/fxnaranjo/filenet/raw/main/images/11operator.png "Operator11")
+
+* Next, enter the number of Object Stores to be created, in this case one
+![Opp12](https://github.com/fxnaranjo/filenet/raw/main/images/12operator.png "Operator12")
+
+* Next, review the summary and type Yes to continue with the operator deployment
+![Opp13](https://github.com/fxnaranjo/filenet/raw/main/images/13operator.png "Operator13")
+
+* Review the opneshift web console until the operato is up and running
+![Opp14](https://github.com/fxnaranjo/filenet/raw/main/images/14operator.png "Operator14")
+
+2. Deploy Filenet Custom Resource Definition
+
+
+
+
+
+
+
+
+
 
 
 
