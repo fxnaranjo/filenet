@@ -298,7 +298,7 @@ cd /opt/ibm/ldap/V6.4/sbin
 * In the next screen just hit ENTER because no additional components will be installed
 ![Opp5](https://github.com/fxnaranjo/filenet/raw/main/images/5operator.png "Operator5")
 
-* Next, you must select the features of filnet to be installed, just hit ENTER because no additional will be required. By default cpe,graphql and navigator are installed
+* Next, you must select the features of filnet to be installed, just hit ENTER because no additional features will be required. By default cpe,graphql and navigator are installed
 ![Opp6](https://github.com/fxnaranjo/filenet/raw/main/images/6operator.png "Operator6")
 
 * Next, indicate that you already have an Entitlement Registry key
@@ -326,6 +326,15 @@ cd /opt/ibm/ldap/V6.4/sbin
 ![Opp14](https://github.com/fxnaranjo/filenet/raw/main/images/14operator.png "Operator14")
 
 2. Deploy Filenet Custom Resource Definition
+* The prior procedure creates a file in {$REPO_DIRECTORY}/cert-kubernetes/scripts/generated-cr called ibm_cp4a_cr_final.yaml, to deploy filenet you have to edit this file in order to include your environment properties.
+
+* The following [file](https://github.com/fxnaranjo/filenet/tree/main/cr) can be used as an example.
+
+* Once the file is ready you can deploy filenet using the following command:
+```
+#cd {$REPO_DIRECTORY}/cert-kubernetes/scripts/generated-cr
+#oc apply -f ibm_cp4a_cr_final.yaml
+```
 
 
 
