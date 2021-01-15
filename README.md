@@ -322,7 +322,7 @@ cd /opt/ibm/ldap/V6.4/sbin
 * Next, review the summary and type Yes to continue with the operator deployment
 ![Opp13](https://github.com/fxnaranjo/filenet/raw/main/images/13operator.png "Operator13")
 
-* Review the opneshift web console until the operato is up and running
+* Review the openshift web console until the operator is up and running
 ![Opp14](https://github.com/fxnaranjo/filenet/raw/main/images/14operator.png "Operator14")
 
 2. Deploy Filenet Custom Resource Definition
@@ -332,9 +332,22 @@ cd /opt/ibm/ldap/V6.4/sbin
 
 * Once the file is ready you can deploy filenet using the following command:
 ```
-#cd {$REPO_DIRECTORY}/cert-kubernetes/scripts/generated-cr
+#cd {$REPO_DIRECTORY}/cert-kubernetes/scripts/generated-cr/
 #oc apply -f ibm_cp4a_cr_final.yaml
 ```
+* Review the openshift web console until all pods are up and running: 2 cpe, 2 graphql , 2 navigator
+![Deploy1](https://github.com/fxnaranjo/filenet/raw/main/images/1deploy.png "Deploy1")
+
+* Once the deployment is completed run the following script for final validation
+```
+#cd {$REPO_DIRECTORY}/cert-kubernetes/scripts/
+#./cp4a-post-deployment.sh
+```
+* The screen will show the URLs for both ACCE and Navigator
+![Deploy2](https://github.com/fxnaranjo/filenet/raw/main/images/2deploy.png "Deploy2")
+
+
+
 
 
 
