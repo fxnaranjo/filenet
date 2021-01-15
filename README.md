@@ -55,7 +55,7 @@ ssh -X -C -i id_rsa root@169.59.xxx.xxx
 #./db2licm -a {$INSTALLER_DIRECORY}/awse_o/db2/license/db2awse_o.lic
 ```
 5. Create the reqiered databases
-* Using the file provided in the db2 folder on this repo, run the following commands:
+* Using the files provided in the [db2](https://github.com/fxnaranjo/filenet/tree/main/db2) folder on this repo, run the following commands:
 ```
 #su - db2inst1
 #./GCDDB.sh GCDDB   ----> CREATES THE GCD Database with the provided name
